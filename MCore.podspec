@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MCore'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A short description of MCore.'
 
 # This description is used to generate tags and improve search results.
@@ -36,8 +36,9 @@ TODO: Add long description of the pod here.
   #   'morpheus' => ['morpheus/Assets/*.png']
   # }
   s.resources = "MCore.bundle"
-  s.ios.vendored_frameworks = "MCore.framework"
-  # s.public_header_files = 'morpheus/Classes/**/*.h'
+  s.ios.vendored_frameworks = "MCore.framework", "MCore.license"
+  s.frameworks = 'Accelerate', 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration', 'MessageUI', 'AudioToolbox', 'QuartzCore', 'CoreData', 'CoreTelephony', 'Security', 'CoreGraphics', 'Foundation', 'UIKit', 'ImageIO', 'WebKit', 'AVKit', 'Photos', 'AVFoundation', 'AssetsLibrary'
+  s.libraries = 'xml2', 'z'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
